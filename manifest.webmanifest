@@ -1,0 +1,17 @@
+{
+  "name": "별빛 이야기책",
+  "short_name": "별빛이야기",
+  "description": "카메라로 밤하늘을 비추면 별자리가 그려지고, 별자리에 얽힌 옛이야기를 그림책으로 읽어 주는 앱",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#040817",
+  "theme_color": "#060b1f",
+  "lang": "ko",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

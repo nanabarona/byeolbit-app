@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#060b1f">
+  <meta name="robots" content="noindex, nofollow">
+  <title>별빛 이야기책</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="별빛이야기">
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; background: radial-gradient(120% 80% at 50% 0%, #1a2656, #070c22 60%, #03050f); color: #eef1ff;
+      font-family: "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif; }
+    body { min-height: 100dvh; display: grid; place-items: center; padding: max(24px, env(safe-area-inset-top)) 20px max(24px, env(safe-area-inset-bottom)); }
+    .card { width: min(360px, 100%); text-align: center; }
+    .mark { font-size: 40px; color: #ffd98a; text-shadow: 0 0 18px rgba(255, 210, 120, .8); }
+    h1 { margin: 8px 0 6px; font-size: 26px; letter-spacing: 1px; }
+    #msg { color: #c9d1f0; line-height: 1.6; min-height: 3.2em; margin: 0 0 14px; font-size: 15px; }
+    #msg.bad { color: #ffb4a8; }
+    form { display: grid; gap: 10px; }
+    input { width: 100%; padding: 14px 16px; border-radius: 14px; border: 1px solid rgba(196, 210, 255, .35); background: rgba(255, 255, 255, .06); color: #fff; font-size: 17px; }
+    input:focus { outline: 3px solid #ffd98a; outline-offset: 1px; }
+    button { padding: 14px; border: 0; border-radius: 14px; background: linear-gradient(180deg, #ffd98a, #f0b84f); color: #3b2706; font-size: 17px; font-weight: 700; }
+    button:disabled { opacity: .6; }
+    .small { margin-top: 16px; color: #8f9ac2; font-size: 13px; line-height: 1.6; }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="mark" aria-hidden="true">✦</div>
+    <h1>별빛 이야기책</h1>
+    <p id="msg" role="status" aria-live="polite">화면을 준비하고 있어요…</p>
+    <form id="f" hidden>
+      <input id="pw" type="password" autocomplete="current-password" placeholder="받은 비밀번호" aria-label="비밀번호" required>
+      <button>열기</button>
+    </form>
+    <p class="small">초대받은 분만 볼 수 있어요. 한 번 열면 이 기기에서는 다음부터 바로 열려요.<br>아이폰: Safari [공유 › 홈 화면에 추가]로 앱처럼 쓸 수 있어요.</p>
+  </main>
+  <script src="unlock.js"></script>
+  <script>
+    document.getElementById('msg').textContent = '초대받은 분만 볼 수 있어요. 받은 비밀번호를 넣어 주세요.';
+    Unlock.boot();
+  </script>
+</body>
+</html>
